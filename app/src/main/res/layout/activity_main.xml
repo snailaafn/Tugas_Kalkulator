@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/prevTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:maxLines="2"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/resultTV"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:text="7" />
+
+        <Button
+            style="@style/btnNum"
+            android:text="8" />
+
+        <Button
+            style="@style/btnNum"
+            android:text="9" />
+
+        <Button
+            style="@style/btnOperators"
+            android:text="/" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:text="4" />
+
+        <Button
+            style="@style/btnNum"
+            android:text="5" />
+
+        <Button
+            style="@style/btnNum"
+            android:text="6" />
+
+        <Button
+            style="@style/btnOperators"
+            android:text="x" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:text="1" />
+
+        <Button
+            style="@style/btnNum"
+            android:text="2" />
+
+        <Button
+            style="@style/btnNum"
+            android:text="3" />
+
+        <Button
+            style="@style/btnOperators"
+            android:text="+" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:text="0" />
+
+        <Button
+            style="@style/btnOperators"
+            android:onClick="allClearActions"
+            android:text="C" />
+
+
+        <Button
+            style="@style/btnEqual"
+            android:text="=" />
+
+        <Button
+            style="@style/btnOperators"
+            android:text="-" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
